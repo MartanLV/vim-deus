@@ -85,7 +85,7 @@ let s:ds = {}
 " fill it with absolute colors
 let s:ds.dark0       = ['#2C323B', 235]     " 40-40-40 Background
 let s:ds.dark1       = ['#3c3836', 237]     " 60-56-54
-let s:ds.dark2       = ['#2C313A', 239]     " 80-73-69
+let s:ds.dark2       = ['#65476E', 239]     " 80-73-69
 let s:ds.dark3       = ['#665c54', 241]     " 102-92-84
 let s:ds.dark4       = ['#7c6f64', 243]     " 124-111-100
 let s:ds.dark4_256   = ['#7c6f64', 243]     " 124-111-100
@@ -410,10 +410,11 @@ endif
 hi! link NonText deusBg2
 hi! link SpecialKey deusBg2
 
-call s:HL('Visual',    s:none,  s:bg3, s:invert_selection)
+call s:HL('Visual', s:none, s:bg1, '')
+" call s:HL('Visual', s:none,  s:bg3, s:invert_selection)
 hi! link VisualNOS Visual
 
-call s:HL('Search',    s:bg0, s:yellow)
+call s:HL('Search', s:bg0, s:yellow)
 call s:HL('IncSearch', s:bg0, s:hls_cursor)
 
 call s:HL('Underlined', s:blue, s:none, s:underline)
@@ -462,7 +463,7 @@ call s:HL('FoldColumn', s:gray, s:bg1)
 " Cursor: {{{
 
 " Character under cursor
-"call s:HL('Cursor', s:none, s:none, s:inverse)
+call s:HL('Cursor', s:yellow, s:yellow, '')
 " Visual mode cursor, selection
 hi! link vCursor Cursor
 " Input moder cursor
